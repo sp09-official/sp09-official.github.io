@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP09 - Illegal Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <style>
+        /* Add styles here */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        .popup-content button {
+            margin-top: 10px;
+        }
+        .show {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Policy Popup -->
+    <div id="policy-popup" class="popup">
+        <div class="popup-content">
+            <header>
+                <h1>SP09 - Policy on Illegal Tools</h1>
+            </header>
+            <p>By using this website, you agree to our terms and conditions.</p>
+            <label>
+                <input type="checkbox" id="accept-policy">
+                I agree to the terms and conditions
+            </label>
+            <br>
+            <button id="accept-btn" disabled>Continue</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="dropdown">
+                <div class="menu-icon">
+                    <span>&#9776;</span>
+                </div>
+                <div class="dropdown-menu">
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="http://vmnjt.faf.dz.global.prod.fastly.net/YjdjMjk0NjdiMDU0OTI5MGFjZTkxYQ==/?type=ist&orders=780688558&auth=OTJmMjY2NmMxMzQwYTU1NGNlODk0Mg==">Insta followers</a></li>
+                        <li><a href="yt.html">Youtube Subscriber</a></li>
+                        <li><a href="http://vmnjt.faf.dz.global.prod.fastly.net/YjdjMjk0NjdiMDU0OTI5MGFjZTkxYQ==/?type=x1&orders=780688558&auth=OTJmMjY2NmMxMzQwYTU1NGNlODk0Mg==">Facebook Like , Comments , followers</a></li>
+                        <li><a href="developer.html">Developer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <!-- Keep existing navbar-menu items here if needed -->
+        </div>
+        <div class="navbar-right">
+            <div class="language-selector">
+                <span>&#x1F310;</span>
+                <span>ENGLISH</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="para-des">
+            <div class="wrap">
+                <h1>SP09 present illegal tool.</h1>
+                <p>To gain followers, please start by logging in through the menu bar. This step is essential for
+                    accessing our follower services.</p>
+                <p>Once you’re logged in, we will process your request to provide followers. Ensure that you enter the
+                    correct credentials for a smooth login experience.</p>
+                <p>After logging in, you will automatically receive followers according to our guidelines. This helps in
+                    enhancing your online presence.</p>
+                <p>If you encounter any issues during the login process or have questions about our services, please
+                    don’t hesitate to contact our support team.</p>
+                <p>We are here to assist you and ensure that your experience with us is positive and effective.</p>
+            </div>
+        </div>
+    </div>
+     <div class="footer">
+        <p>&copy; All right reserved <strong>SP09❤️</strong></p>
+     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const dropdown = document.querySelector('.dropdown');
+            const policyPopup = document.getElementById('policy-popup');
+            const acceptPolicyCheckbox = document.getElementById('accept-policy');
+            const acceptBtn = document.getElementById('accept-btn');
+
+            // Show the policy popup when the page loads
+            policyPopup.classList.add('show');
+
+            menuIcon.addEventListener('click', function () {
+                dropdown.classList.toggle('show');
+            });
+
+            // Optionally, close the dropdown if clicking outside of it
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target) && !menuIcon.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // Enable the continue button when the checkbox is checked
+            acceptPolicyCheckbox.addEventListener('change', function () {
+                acceptBtn.disabled = !acceptPolicyCheckbox.checked;
+            });
+
+            // Redirect to main content when the continue button is clicked
+            acceptBtn.addEventListener('click', function () {
+                policyPopup.classList.remove('show');
+                // Optionally, you could redirect to a specific URL here
+            });
+        });
+    </script>
+</body>
+
+</html>
